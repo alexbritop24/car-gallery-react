@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import NavBar from './components/NavBar';
+import CarCarousel from './components/CarCarousel';
+import { cars } from './Data/cars';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <div className="App">
+      <NavBar />
+
+      {/* Hero Section */}
+      <section className="hero">
+        <h1 className="hero-title">Welcome to the World of Sports Cars</h1>
+        <p className="hero-subtitle">
+          Explore the most iconic performance cars by country , American muscle, Japanese tuners, and more.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        <button
+          className="hero-button"
+          onClick={() => {
+            const section = document.getElementById('american');
+            section?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Explore Cars
+        </button>
+      </section>
+
+      {/* Car Sections */}
+      <main>
+        {Object.entries(cars).map(([country, carList]) => (
+          <section key={country} id={country} className="car-section">
+            <h2>{country.charAt(0).toUpperCase() + country.slice(1)} Sports Cars</h2>
+            <CarCarousel country={country} cars={carList} />
+          </section>
+        ))}
+      </main>
+
+      {/* Footer */}
+      <footer>
+        <p>&copy; Created by Nasir, Alex, and Ishmail</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
+
+

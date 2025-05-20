@@ -1,57 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>World of Sports Cars</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <header>
-    <h1>World of Sports Cars</h1>
-    <nav>
-      <ul>
-        <li><a href="#american">American</a></li>
-        <li><a href="#japanese">Japanese</a></li>
-        <li><a href="#british">British</a></li>
-        <li><a href="#german">German</a></li>
-        <li><a href="#korean">Korean</a></li>
-      </ul>
-    </nav>
-    <button id="theme-toggle">Toggle Theme</button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World of Sports Cars</title>
 
-  <main>
-    <section id="american" class="car-section">
-      <h2>American Sports Cars</h2>
-      <div class="carousel" data-country="american"></div>
-    </section>
-
-    <section id="japanese" class="car-section">
-      <h2>Japanese Sports Cars</h2>
-      <div class="carousel" data-country="japanese"></div>
-    </section>
-
-    <section id="british" class="car-section">
-      <h2>British Sports Cars</h2>
-      <div class="carousel" data-country="british"></div>
-    </section>
-
-    <section id="german" class="car-section">
-      <h2>German Sports Cars</h2>
-      <div class="carousel" data-country="german"></div>
-    </section>
-
-    <section id="korean" class="car-section">
-      <h2>Korean Sports Cars</h2>
-      <div class="carousel" data-country="korean"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; Created by Nasir, Alex, and Ishmail </p>
-  </footer>
-</body>
+    <!-- Fonts: Space Grotesk for body, Playfair Display for headings -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
 
